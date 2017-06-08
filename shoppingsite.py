@@ -110,7 +110,8 @@ def add_to_cart(melon_id):
     print melon_id
     print session["cart"]
     session["cart"][melon_id] = 1
-    return "Blah"
+    flash("successfully added melon to cart!")
+    return render_template("base.html")
 
 
 @app.route("/login", methods=["GET"])
